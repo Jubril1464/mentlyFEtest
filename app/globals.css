@@ -1,24 +1,92 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-grotesk: "Space Grotesk";
+  --font-karla: "Karla";
+  --color-primary-1: #1d1d41;
+  --color-input: #dcd9d9;
+  --color-secondary-1: #cbc8ff;
+  --color-text: #8c89b4;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #141332;
+  color: #fff;
+  font-family: "Space Grotesk";
 }
+/* For WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* For Edge and IE */
+body {
+  -ms-overflow-style: none;
+}
+
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: #1d1d41;
+  height: 12px;
+  width: 12px;
+}
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #cbc8ff;
+  height: 8px;
+  width: 25px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border-radius: 5px;
+}
+.mySwiper .swiper-pagination {
+  bottom: -5px !important; 
+}
+
+.card {
+  background-image: linear-gradient(177.23deg, #9c2cf3 -13.49%, #3a6ff9 109.75%),
+    url("/images/card-mask.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(177.23deg, #9c2cf3 -13.49%, #3a6ff9 109.75%);
+  z-index: 1;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/card-mask.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+  mix-blend-mode: overlay;
+}
+
+.card > * {
+  position: relative;
+  z-index: 3;
+}
+

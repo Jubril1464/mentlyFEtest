@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+UIFRY
 
-## Getting Started
+A Next.js application built using React hooks, TypeScript, Zod, clsx, Swiper, react-chartjs-2, and tailwind-merge.
 
-First, run the development server:
+Project Setup
 
-```bash
+Prerequisites
+
+Ensure you have the following installed:
+
+Node.js (latest LTS recommended)
+
+npm or yarn
+
+Installation
+1. Clone the repository:
+git clone <repository-url>
+cd <project-directory>
+
+2. Install dependencies:
+npm install
+# or
+yarn install
+
+Running the Project
+
+To start the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This will start the application at http://localhost:3000/.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Assumptions Made During Development
+The project structure follows a modular and scalable pattern.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+TypeScript is used for type safety.
 
-## Learn More
+Zod is used for form validation.
 
-To learn more about Next.js, take a look at the following resources:
+Tailwind CSS is used for styling with tailwind-merge for optimized class merging.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+clsx is used to conditionally join class names.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Swiper is used for implementing carousels/sliders.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+react-chartjs-2 is used for visualizing data with charts.
