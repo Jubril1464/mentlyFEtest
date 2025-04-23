@@ -38,7 +38,7 @@ const CustomSelect: React.FC<SelectProps> = ({
 
   return (
     <div className="relative w-[64px" ref={dropdownRef}>
-      {/* Select Box */}
+ 
       <div
         className="flex items-center justify-between border border-[#E1E7EC] text-[#595564] w-[78px] rounded-sm h-6 p-1 text-xs cursor-pointer transition"
         onClick={() => setIsOpen(!isOpen)}
@@ -51,7 +51,6 @@ const CustomSelect: React.FC<SelectProps> = ({
         />
       </div>
    
-      {/* Dropdown Options */}
       <div
         className={`absolute left-0 mt-2 w-full bg-white text-[#595564] rounded-lg shadow-lg z-10 overflow-hidden transition-all duration-200 ease-in-out ${
           isOpen
