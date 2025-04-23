@@ -1,6 +1,6 @@
 "use client";
 import { CustomInput } from "./ui/input/custom-input";
-import { useForm, } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "./ui/button/button";
@@ -37,14 +37,14 @@ export const LoginForm = () => {
     <form
       action=""
       onSubmit={handleSubmit(onSubmit)}
-      className="min-[830px]:w-[424px] md:w-[380px] w-full flex flex-col gap-3 "
+      className="min-[830px]:w-[424px] md:w-[380px] w-full flex flex-col gap-3 font-chivo "
     >
       <CustomInput
         name="email"
         label="Email Address"
         register={register}
         errors={errors}
-        placeholder="E.g Aliriaz@Uifry.com"
+        placeholder="E.g Aliriaz@techrity.com"
       />
       <CustomInput
         name="password"
@@ -55,25 +55,13 @@ export const LoginForm = () => {
         inputType="password"
       />
       <div className="flex justify-end">
-        <Link
-          href="/"
-          className="font-semibold font-karla text-secondary-1 text-base"
-        >
+        <Link href="/" className="font-semibold  text-secondary-1 text-base">
           I Forgot My Password
         </Link>
       </div>
-      <Button as="button" size="full" className="mt-10">
+      <Button as="button" className="mt-5">
         Login
       </Button>
-      <div className="flex justify-center text-base items-center gap-1">
-        <p>Not Ali Riaz?</p>
-        <Link
-          href="/"
-          className="font-semibold font-karla text-secondary-1 underline"
-        >
-          Login To Continue
-        </Link>
-      </div>
     </form>
   );
 };

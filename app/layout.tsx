@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Karla } from "next/font/google";
+import {Karla,Chivo } from "next/font/google";
 import "./globals.css";
 
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const chivo = Chivo({
   subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-chivo",
+  display: "swap",
 });
 const karla = Karla({
   variable: "--font-karla",
@@ -25,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${karla.variable} antialiased`}
+        className={`${chivo.variable} ${karla.variable} antialiased`}
       >
         {children}
       </body>

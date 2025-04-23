@@ -1,113 +1,164 @@
-import {Transaction, WalletTransaction} from "@/model/interface"
-import AdobeLogo from '@/public/images/adobe.png'
-import McDonaldLogo from '@/public/images/mc-donald.png'
-import LevisLogo from '@/public/images/levis.png'
-export const testimonials = [
-  {
-    name: "Ali Riaz",
-    location: "Singapore",
-    text: "I've been using Uifry for over a year, and it’s helped simplify all my payments.",
-  },
-  {
-    name: "John Doe",
-    location: "United States",
-    text: "Uifry has been a game-changer for managing my expenses!",
-  },
-  {
-    name: "Jane Smith",
-    location: "Canada",
-    text: "Highly recommend Uifry! It's easy to use and very reliable.",
-  },
-];
-
-export const transactions: Transaction[] = [
+export const programs = [
   {
     id: 1,
-    name: "Adobe After Effect",
-    logo: AdobeLogo, // Replace with actual image path
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
+    title: "Fundamentals of User interface & Experience",
+    mode: "Bootcamp",
+    about:
+      "This program is a hands-on guide designed for designers who want to master color theory and confidently apply it to their designs. This practical approach",
+    image: "/images/user-interface.jpg",
+    mentors: [
+      "https://randomuser.me/api/portraits/men/75.jpg",
+      "https://randomuser.me/api/portraits/women/65.jpg",
+      "https://randomuser.me/api/portraits/men/85.jpg",
+    ],
   },
   {
     id: 2,
-    name: "McDonald's",
-    logo: McDonaldLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
+    title: "Colour Hack Practical Group Call",
+    mode: "Group call",
+    about:
+      "This program is a hands-on guide designed for designers who want to master color theory and confidently apply it to their designs. This practical approach",
+    image: "/images/color-hack.jpg",
+    mentors: ["https://randomuser.me/api/portraits/men/85.jpg"],
   },
   {
     id: 3,
-    name: "Levi",
-    logo: LevisLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
-  },
-  {
-    id: 4,
-    name: "Adobe After Effect",
-    logo: AdobeLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
-  },
-  {
-    id: 5,
-    name: "Levi",
-    logo: LevisLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
+    title: "Colour Hack Practical Group Call",
+    mode: "Group call",
+    about:
+      "This program is a hands-on guide designed for designers who want to master color theory and confidently apply it to their designs. This practical approach",
+    image: "/images/color-hack.jpg",
+    mentors: ["https://randomuser.me/api/portraits/men/85.jpg"],
   },
 ];
 
-
-export const walletTransactions: WalletTransaction[] = [
+export const groupCalls = [
   {
     id: 1,
-    name: "Adobe After Effect",
-    logo: AdobeLogo, // Replace with actual image path
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
-    description: "Adobe after Virtual Card top-up",
+    title: "Weekly Meeting - Product Demo Review with Testers",
+    image: "/images/group-call-1.jpg",
+    date: "2024-07-30T09:00:00Z",
+    status: "Ongoing",
+    time: "9:00 - 11:00AM",
+    mentors: [
+      "https://randomuser.me/api/portraits/men/75.jpg",
+      "https://randomuser.me/api/portraits/women/65.jpg",
+      "https://randomuser.me/api/portraits/men/85.jpg",
+    ],
+    studyGroup: "UX Strategy Study Group",
+    groupImage: "https://randomuser.me/api/portraits/men/85.jpg",
   },
   {
     id: 2,
-    name: "McDonald's",
-    logo: McDonaldLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
-    description: "Adobe after Virtual Card top-up",
+    title: "Weekly Meeting - Product Demo Review with Testers",
+    image: "/images/group-call-2.jpg",
+    date: "2024-07-30T09:00:00Z",
+    status: "Upcoming",
+    time: "9:00 - 11:00AM",
+    mentors: [
+      "https://randomuser.me/api/portraits/men/75.jpg",
+      "https://randomuser.me/api/portraits/women/65.jpg",
+    ],
+    studyGroup: "UX Strategy Study Group",
+    groupImage: "https://randomuser.me/api/portraits/men/85.jpg",
   },
   {
     id: 3,
-    name: "Levi",
-    logo: LevisLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
-    description: "Adobe after Virtual Card top-up",
+    title: "Weekly Meeting - Product Demo Review with Testers",
+    image: "/images/group-call-3.jpg",
+    date: "2024-07-30T09:00:00Z",
+    status: "Ongoing",
+    time: "9:00 - 11:00AM",
+    mentors: [
+      "https://randomuser.me/api/portraits/men/75.jpg",
+      "https://randomuser.me/api/portraits/women/65.jpg",
+      "https://randomuser.me/api/portraits/men/85.jpg",
+    ],
+    studyGroup: "UX Strategy Study Group",
+    groupImage: "https://randomuser.me/api/portraits/men/85.jpg",
   },
   {
     id: 4,
-    name: "Adobe After Effect",
-    logo: AdobeLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
-    description: "Adobe after Virtual Card top-up",
+    title: "Weekly Meeting - Product Demo Review with Testers",
+    image: "/images/group-call-1.jpg",
+    date: "2024-07-30T09:00:00Z",
+    status: "Upcoming",
+    time: "9:00 - 11:00AM",
+    mentors: [
+      "https://randomuser.me/api/portraits/men/75.jpg",
+      "https://randomuser.me/api/portraits/women/65.jpg",
+      "https://randomuser.me/api/portraits/men/85.jpg",
+    ],
+    studyGroup: "UX Strategy Study Group",
+    groupImage: "https://randomuser.me/api/portraits/men/85.jpg",
+  },
+];
+
+export const students = [
+  {
+    id: 1,
+    name: "Adeati Samuel",
+    email: "maxwellsmith@gmail.com",
+    avatar: "https://randomuser.me/api/portraits/men/85.jpg",
+  },
+  {
+    id: 2,
+    name: "Maxwell Smith",
+    email: "maxwellsmith@gmail.com",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+  },
+  {
+    id: 3,
+    name: "Adeati Samuel",
+    email: "maxwellsmith@gmail.com",
+    avatar: "https://randomuser.me/api/portraits/men/85.jpg",
+  },
+  {
+    id: 4,
+    name: "Maxwell Smith",
+    email: "maxwellsmith@gmail.com",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
   },
   {
     id: 5,
-    name: "Levi",
-    logo: LevisLogo,
-    date: "2025-03-05T14:30:00Z",
-    amount: "$80.09",
-    status: "Deposited",
-    description: "Adobe after Virtual Card top-up",
+    name: "Maxwell Smith",
+    email: "maxwellsmith@gmail.com",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+  },
+  {
+    id: 6,
+    name: "Maxwell Smith",
+    email: "maxwellsmith@gmail.com",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+  },
+  {
+    id: 7,
+    name: "Maxwell Smith",
+    email: "maxwellsmith@gmail.com",
+    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+  },
+];
+
+export const activities = [
+  {
+    id:1,
+    title: "KYC Verification",
+    content: "45 new persons just signed up on Mently.",
+    time: "2024-04-30T09:00:00Z",
+    avatar: "https://randomuser.me/api/portraits/women/75.jpg",
+  },
+  {
+    id:2,
+    title: "New User Sign Up",
+    content: "45 new persons just signed up on Mently.",
+    time: "2024-04-30T09:00:00Z",
+    avatar: "https://randomuser.me/api/portraits/women/80.jpg",
+  },
+  {
+    id:3,
+    title: "Withdrawal Request",
+    content: "Mardian requested a withdrawal",
+    time: "2024-04-30T09:00:00Z",
+    avatar: "https://randomuser.me/api/portraits/women/60.jpg",
   },
 ];

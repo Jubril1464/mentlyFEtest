@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { GoTriangleDown } from "react-icons/go";
+import { LiaAngleDownSolid } from "react-icons/lia";
 interface SelectProps {
   options: string[];
   placeholder?: string;
@@ -40,12 +40,12 @@ const CustomSelect: React.FC<SelectProps> = ({
     <div className="relative w-[64px" ref={dropdownRef}>
       {/* Select Box */}
       <div
-        className="flex items-center justify-between border border-[#8C89B4] text-[#8C89B4] w-[64px] rounded-sm h-6 p-1 text-xs cursor-pointer transition"
+        className="flex items-center justify-between border border-[#E1E7EC] text-[#595564] w-[78px] rounded-sm h-6 p-1 text-xs cursor-pointer transition"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-[#8C89B4]">{selected || placeholder}</span>
-        <GoTriangleDown
-          className={`w-5 h-5 transition-transform duration-200 ${
+        <span className="text-[#595564]">{selected || placeholder}</span>
+        <LiaAngleDownSolid
+          className={`size-4 transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -53,7 +53,7 @@ const CustomSelect: React.FC<SelectProps> = ({
 
       {/* Dropdown Options */}
       <div
-        className={`absolute left-0 mt-2 w-full bg-[#8C89B4] rounded-lg shadow-lg z-10 overflow-hidden transition-all duration-200 ease-in-out ${
+        className={`absolute left-0 mt-2 w-full bg-white text-[#595564] rounded-lg shadow-lg z-10 overflow-hidden transition-all duration-200 ease-in-out ${
           isOpen
             ? "max-h-60 opacity-100 scale-100"
             : "max-h-0 opacity-0 scale-95"

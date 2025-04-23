@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 type ButtonProps = {
   className?: string;
@@ -20,10 +21,10 @@ type ButtonProps = {
 export const Button = ({
   className,
   children,
-  color = "text-black",
+  color = "text-white",
   bgColor = "bg-secondary-1",
   size = "sm",
-  hoverBgColor = "hover:bg-secondary-1/90",
+  hoverBgColor = "hover:bg-secondary-1/50",
   onClick,
   as,
   to = "/",
@@ -31,19 +32,31 @@ export const Button = ({
   disabled,
   variant = "solid",
 }: ButtonProps) => {
-  let buttonStyle = `${bgColor} ${color} ${borderRadius}`;
+  const buttonStyle = cn(
+    bgColor,
+    color,
+    borderRadius,
+    {
+      "border border-secondary-1 hover:!bg-transparent text-secondary-1 bg-transparent":
+        variant === "outline",
+    },
+    className
+  );
 
-  if (variant === "outline") {
-    buttonStyle = `border border-secondary-1 text-secondary-1 ${color} ${borderRadius}`;
-    bgColor = "bg-transparent";
-    hoverBgColor = "hover:border-secondary-1";
-  }
+  const sizeStyle = cn({
+    "h-[36px] text-xs": size === "sm",
+    "h-11 text-base": size === "md",
+    "h-12 w-full text-base": size === "lg",
+  });
 
   if (as === "link")
     return (
       <Link
         href={to}
-        className={`${className} flex justify-center font-karla items-center gap-2`}
+        className={cn(
+          "flex justify-center font-chivo items-center gap-2 text-secondary-1",
+          className
+        )}
       >
         {children}
       </Link>
@@ -53,13 +66,13 @@ export const Button = ({
     <button
       disabled={disabled}
       onClick={onClick}
-      className={` ${
-        size === "sm"
-          ? "h-[36px] w-[99px] text-xs"
-          : size === "md"
-          ? "h-11 w-[134px] text-base"
-          : "h-12 w-full text-base"
-      } px-5 font-medium flex justify-center cursor-pointer items-center gap-2 ${buttonStyle} ${className} duration-100 ${hoverBgColor} `}
+      className={cn(
+        "px-3 font-medium flex justify-center  cursor-pointer items-center gap-2 duration-100",
+        buttonStyle,
+        sizeStyle,
+        hoverBgColor,
+        { "cursor-not-allowed opacity-50": disabled }
+      )}
     >
       {children}
     </button>

@@ -1,5 +1,6 @@
 import type React from "react";
-import { Sidebar } from '@/components/Sidebar'
+import { Sidebar } from "@/components/Sidebar";
+import { Header } from "@/components/Header";
 
 export default function AuthenticatedLayout({
   children,
@@ -7,10 +8,11 @@ export default function AuthenticatedLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-10 h-screen bg-[#141430] min-[900px]:fixed relative w-full overflow-y-hidden">
+    <div className="grid grid-cols-12 h-screen bg-gray-100 min-[900px]:fixed relative w-full overflow-y-hidden">
       <Sidebar />
-      <div className="xl:col-span-8 min-[900px]:col-span-9 col-span-full sm:px-8 px-5 py-8 overflow-y-auto">
-        {children}
+      <div className="min-[900px]:col-span-10 col-span-full overflow-y-auto">
+        <Header />
+        <div className="sm:px-8 px-5 py-8">{children}</div>
       </div>
     </div>
   );

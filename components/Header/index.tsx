@@ -1,20 +1,32 @@
-import { HeaderProps } from "@/model/interface";
-import { IoSearchOutline } from "react-icons/io5";
-export const Header = ({ title, subTitle }: HeaderProps) => {
+import { clipSentence } from "@/lib/utils";
+import { BellIcon } from "@/public/icons";
+import Image from "next/image";
+import { LiaAngleDownSolid } from "react-icons/lia";
+export const Header = () => {
   return (
-    <header className="flex flex-wrap items-center justify-between font-karla text-white min-[900px]:pl-0 pl-8 gap-3">
-      <div className="flex flex-col gap-2">
-        <h2 className="font-semibold text-2xl">{title}</h2>
-        <p className="text-[#C1C1C1] text-base font-normal">{subTitle}</p>
+    <header className="flex items-center justify-end font-chivo bg-white shadow px-8 gap-3 h-20 text-[#404040]">
+      <button className="relative cursor-pointer">
+        <BellIcon />
+        <span className="size-2 rounded-full bg-[#FF3E3E] absolute top-0 right-1 z-10"></span>
+      </button>
+      <div className="flex gap-2">
+        <div className="size-10 rounded-full bg-light-secondary grid place-items-center">
+          <Image
+            src="/images/white-logo.svg"
+            alt="Techrity Logo"
+            className="size-8"
+            height={32}
+            width={32}
+          />
+        </div>
+        <div className="flex flex-col font-chivo text-[#404040]">
+          <p>{clipSentence("Techrity Founder", 13)}</p>
+          <p className="text-xs">Member</p>
+        </div>
       </div>
-      <div className="relative">
-        <input
-          type="text"
-          placeholder="Search for anything..."
-          className="rounded-lg min-[450px]:w-[380px] w-full px-4 h-10 py-2 bg-primary-1 font-karla placeholder:font-karla placeholder:text-[#AEABD8] focus:outline focus-within:border-none border-none"
-        />
-        <IoSearchOutline className="absolute right-5 top-1/2 -translate-y-1/2 text-white" />
-      </div>
+      <button className="size-6 rounded-md bg-secondary-1 grid place-items-center cursor-pointer">
+        <LiaAngleDownSolid color="#C2C2C2" size={16} />
+      </button>
     </header>
   );
 };

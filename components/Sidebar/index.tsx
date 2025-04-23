@@ -6,12 +6,10 @@ import { IMenu } from "@/model/interface";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { QuestionIcon, MoonIcon } from "@/public/icons";
-import Avatar from "@/public/images/avatar.png";
-import { GoTriangleDown } from "react-icons/go";
 import { HiBars2 } from "react-icons/hi2";
 import { LiaTimesSolid } from "react-icons/lia";
-
+import { LogoutIcon, OutlineUserIcon, SidebarIcon } from "@/public/icons";
+import { Switch } from "../ui/switch";
 
 export const Sidebar = () => {
   const pathname = usePathname();
@@ -19,7 +17,6 @@ export const Sidebar = () => {
   const [showBar, setShowBar] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const navIconRef = useRef<HTMLButtonElement>(null);
-
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -46,7 +43,7 @@ export const Sidebar = () => {
   return (
     <>
       <button
-        className="absolute left-5 top-10 border border-secondary-1 size-6 grid place-items-center rounded-sm"
+        className="absolute left-5 top-7  bg-secondary-1 size-6 grid place-items-center rounded-sm z-10"
         ref={navIconRef}
         onClick={() => setShowBar(true)}
       >
@@ -54,7 +51,7 @@ export const Sidebar = () => {
       </button>
       <div
         ref={sidebarRef}
-        className={`bg-primary-1 h-screen p-5 flex flex-col duration-100 transform justify-between xl:col-span-2 col-span-1 font-karla min-[900px]:static fixed z-40 min-[900px]:left-0 min-[900px]:w-auto w-[300px] left-0 ${
+        className={`bg-primary-1 overflow-y-auto h-screen p-5 flex flex-col duration-100 transform justify-between col-span-2 font-karla min-[900px]:static fixed z-40 min-[900px]:left-0 min-[900px]:w-auto w-[300px] left-0 ${
           showBar
             ? "max-[900px]:translate-x-0"
             : "max-[900px]:-translate-x-full"
@@ -70,6 +67,9 @@ export const Sidebar = () => {
                 width={97}
                 className="my-5 w-[97px] h-[30px]"
               />
+              <button>
+                <SidebarIcon />
+              </button>
               <button
                 onClick={() => setShowBar(false)}
                 ref={navIconRef}
@@ -88,11 +88,11 @@ export const Sidebar = () => {
                     href={item.link}
                     className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors  ${
                       isActive
-                        ? "bg-secondary-1 text-primary-1"
-                        : "text-white hover:bg-secondary-1/10"
+                        ? "bg-white text-text-2"
+                        : "text-gray-primary hover:bg-secondary-1/10"
                     }`}
                   >
-                    {isActive ? item.selectedLogo : item.logo}
+                    {item.logo}
                     <span className="xl:block min-[900px]:hidden block">
                       {item.name}
                     </span>
@@ -100,43 +100,23 @@ export const Sidebar = () => {
                 </li>
               );
             })}
-          </ul>
-
-          <ul className="border-t border-[#4B4B99] mt-5">
-            <li>
-              <button className="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors">
-                <QuestionIcon color="#fff" />
-                <span className="xl:block min-[900px]:hidden block">
-                  Help center
-                </span>
-              </button>
-            </li>
-            <li>
-              <button className="flex items-center gap-3 px-4 py-3 rounded-lg transition-colors">
-                <MoonIcon color="#fff" />
-                <span className="xl:block min-[900px]:hidden block">
-                  Dark theme
-                </span>
-              </button>
+            <li className="flex items-center text-gray-primary gap-3 px-4 py-3 rounded-lg transition-colors hover:bg-secondary-1/10 cursor-pointer">
+              <LogoutIcon /> Logout
             </li>
           </ul>
         </nav>
 
-        <div className="flex justify-between items-center">
-          <div className="flex gap-1 items-center">
-            <Image
-              src={Avatar}
-              alt="Avatar"
-              className="size-10 rounded-full object-cover"
-            />
-            <div className="xl:flex flex-col min-[900px]:hidden flex">
-              <span className="font-bold text-base">Ali Riaz</span>
-              <span className="font-normal text-sm">Web developer</span>
-            </div>
-          </div>
-          <button>
-            <GoTriangleDown className="text-white" />
-          </button>
+        <div className="mt-10 bg-[#FFFFFF1F] rounded-lg p-3 flex flex-col gap-3 w-full">
+          <OutlineUserIcon />
+          <h3 className="font-bold">
+            Got some questions, enquiries or need help?
+          </h3>
+          <Link href="/" className="text-[#F0C074] underline text-[10px]">
+            Visit Mently Help Desk Here
+          </Link>
+        </div>
+        <div className="mt-5">
+          <Switch label="Switch To Classic Mode" />
         </div>
       </div>
     </>

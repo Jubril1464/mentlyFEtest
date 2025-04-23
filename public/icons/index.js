@@ -1,0 +1,15 @@
+export { default as HomeIcon } from "./home.svg?react";
+export { default as ActivitiesIcon } from "./activities.svg?react";
+export { default as AwardIcon } from "./award.svg?react";
+export { default as ChartIcon } from "./charts.svg?react";
+export { default as LogoutIcon } from "./logout.svg?react";
+export { default as NoteIcon } from "./note.svg?react";
+export { default as OutlineUserIcon } from "./outline-user.svg?react";
+export { default as ProgramsIcon } from "./programs.svg?react";
+export { default as SettingsIcon } from "./settings.svg?react";
+export { default as UserIcon } from "./user.svg?react";
+export { default as WalletIcon } from "./wallet.svg?react";
+export { default as SidebarIcon } from "./sidebar.svg?react";
+export { default as BellIcon } from "./bell.svg?react";
+export { default as ListIcon } from "./list.svg?react";
+export { default as GridIcon } from "./grid.svg?react";
