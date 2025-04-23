@@ -50,7 +50,7 @@ const CustomSelect: React.FC<SelectProps> = ({
           }`}
         />
       </div>
-
+   
       {/* Dropdown Options */}
       <div
         className={`absolute left-0 mt-2 w-full bg-white text-[#595564] rounded-lg shadow-lg z-10 overflow-hidden transition-all duration-200 ease-in-out ${
