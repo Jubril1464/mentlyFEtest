@@ -1,47 +1,39 @@
-UIFRY
+# MentlyFEtest Frontend Coding Challenge
 
-A Next.js application built using React hooks, TypeScript, Zod, clsx, Swiper, react-chartjs-2, and tailwind-merge.
+## Welcome
 
-Project Setup
+This challenge is designed to assess your Frontend development skills. We're excited to see your approach to building user interfaces with Next.js and Tailwind CSS.
 
-Prerequisites
+## The Challenge
 
-Ensure you have the following installed:
+Your task is to build a frontend page based on the designs (Website and Mobile Responsive) provided in this [Figma file](https://www.figma.com/design/TJoaUZPIgzakOHleCtJeNb/Mently-Frontend-Test?node-id=1391-1201&t=1K1umhLSyddg7sou-0).
 
-Node.js (latest LTS recommended)
+**Key Requirements:**
+* **Use Next.js:**  The application should be built using the Next.js framework.
+* **Use Tailwind CSS:** Style the application using Tailwind CSS.
+* **Responsiveness:** Ensure the application is responsive and works well on different screen sizes.
+* **Accessibility:**  Follow accessibility best practices to make the application usable for everyone.
+* **Code Quality:**  Write clean, well-documented, and maintainable code.
 
-npm or yarn
+**Bonus Points:**
 
-Installation
-1. Clone the repository:
-git clone <repository-url>
-cd <project-directory>
+* **Animations/Interactions:** Add subtle animations or interactions to enhance the user experience.
+* **Testing:** Include unit tests for your components.
+* **Deployment:** Send your Pull request to this Repo
+* **Mobile Responsive:** Desktop and mobile responsive screens
 
-2. Install dependencies:
-npm install
-# or
-yarn install
+## Submission
 
-Running the Project
+Please submit your code within the time allotted (2-3 days) via a PR to this repo.
 
-To start the development server:
-npm run dev
-# or
-yarn dev
-This will start the application at http://localhost:3000/.
+## Evaluation Criteria
 
+Your submission will be evaluated on the following criteria:
 
-Assumptions Made During Development
-The project structure follows a modular and scalable pattern.
+* **Completeness:**  How closely the implementation matches the Figma design.
+* **Code Quality:**  Cleanliness, organization, and maintainability of the code.
+* **Functionality:**  Correctness and efficiency of the application's features.
+* **Responsiveness:**  How well the application adapts to different screen sizes.
+* **Accessibility:**  Adherence to accessibility guidelines.
 
-TypeScript is used for type safety.
-
-Zod is used for form validation.
-
-Tailwind CSS is used for styling with tailwind-merge for optimized class merging.
-
-clsx is used to conditionally join class names.
-
-Swiper is used for implementing carousels/sliders.
-
-react-chartjs-2 is used for visualizing data with charts.
+We appreciate your time and effort in completing this challenge. Good luck!
